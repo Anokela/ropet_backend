@@ -22,8 +22,9 @@ create table hahmo (
         REFERENCES peli (pelinro)
 );
 
-INSERT INTO hahmo (pelaaja_nimi,hahmon_nimi,pelinro) VALUES ('Matti','Ansell Rindeläinen',1),('Heikki','Konrad',1),('Mika','Janitsaari',2),('Juha','Earl',2),('Marko','Hakon Hardbein',3),('Jani','Arianne',3),('Kirsi','Isabella Perez',4),
-('Jaakko','Kurt Von Steiner',4);
+INSERT INTO hahmo (pelinro,pelaaja_nimi,hahmon_nimi) VALUES (1, 'Matti','Ansell Rindeläinen'),(1,'Heikki','Konrad'),(2,'Mika','Janitsaari'),(2,'Juha','Earl'),(3,'Marko','Hakon Hardbein'),(3,'Jani','Arianne'),(4,'Kirsi','Isabella Perez'),
+(4,'Jaakko','Kurt Von Steiner');
+
 create table tila (
     ID int PRIMARY KEY AUTO_increment,
     luontipvm date NOT NULL,
