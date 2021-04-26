@@ -10,7 +10,9 @@ create table peli (
     pelinjohtaja varchar (30) NOT NULL
 );
 
-INSERT INTO peli (pelin_nimi, pelinjohtaja) VALUES ('Witcher RPG','Aleksi'),('Vampire:The Masquerade', 'Tomme'),('Shadowrun','Taneli'),('Twilight:2000','Severi');
+INSERT INTO peli (pelin_nimi, pelinjohtaja) VALUES ('testi','testi'),('Witcher RPG','Aleksi'),('Vampire:The Masquerade', 'Tomme'),('Shadowrun','Taneli'),('Twilight:2000','Severi');
+
+delete from peli where pelin_nimi = 'testi';
 
 
 create table hahmo (
@@ -22,8 +24,8 @@ create table hahmo (
         REFERENCES peli (pelinro)
 );
 
-INSERT INTO hahmo (pelinro,pelaaja_nimi,hahmon_nimi) VALUES (1, 'Matti','Ansell Rindeläinen'),(1,'Heikki','Konrad'),(2,'Mika','Janitsaari'),(2,'Juha','Earl'),(3,'Marko','Hakon Hardbein'),(3,'Jani','Arianne'),(4,'Kirsi','Isabella Perez'),
-(4,'Jaakko','Kurt Von Steiner');
+INSERT INTO hahmo (pelinro,pelaaja_nimi,hahmon_nimi) VALUES (2, 'Matti','Ansell Rindeläinen'),(2,'Heikki','Konrad'),(3,'Mika','Janitsaari'),(3,'Juha','Earl'),(4,'Marko','Hakon Hardbein'),(4,'Jani','Arianne'),(5,'Kirsi','Isabella Perez'),
+(5,'Jaakko','Kurt Von Steiner');
 
 create table tila (
     ID int PRIMARY KEY AUTO_increment,
