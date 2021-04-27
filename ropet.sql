@@ -1,6 +1,6 @@
 drop DATABASE if exists roolipelit;
 
-create DATABASE roolipelit CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+create DATABASE roolipelit /* CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 use roolipelit;
 
 
@@ -21,7 +21,7 @@ create table hahmo (
         REFERENCES peli (pelinro)
 );
 
-INSERT INTO hahmo (pelinro,pelaaja_nimi,hahmon_nimi) VALUES (1, 'Matti','Ansell RindelÃ¤inen'),(1,'Heikki','Konrad'),(2,'Mika','Janitsaari'),(2,'Juha','Earl'),(3,'Marko','Hakon Hardbein'),(3,'Jani','Arianne'),(4,'Kirsi','Isabella Perez'),
+INSERT INTO hahmo (pelinro,pelaaja_nimi,hahmon_nimi) VALUES (1, 'Matti','Zoltan Kergas'),(1,'Heikki','Konrad'),(2,'Mika','Janitsaari'),(2,'Juha','Earl'),(3,'Marko','Hakon Hardbein'),(3,'Jani','Arianne'),(4,'Kirsi','Isabella Perez'),
 (4,'Jaakko','Kurt Von Steiner');
 
 create table tila (
@@ -36,7 +36,7 @@ create table tila (
 );
 
 INSERT INTO tila (luontipvm,hahmonro,hahmon_nimi, tila) VALUES
- ('2019-06-20',1,'Ansell RindelÃ¤inen','Elossa'),('2019-06-14',2,'Konrad','Elossa'),('2020-04-22',3,'Janitsaari','Elossa'),('2020-03-12',4,'Earl','Elossa'),('2021-01-02',5,'Hakon Hardbein','Elossa'),
+ ('2019-06-20',1,'Zoltan Kergas','Elossa'),('2019-06-14',2,'Konrad','Elossa'),('2020-04-22',3,'Janitsaari','Elossa'),('2020-03-12',4,'Earl','Elossa'),('2021-01-02',5,'Hakon Hardbein','Elossa'),
  ('2019-04-15',6,'Arianne','Elossa'),('2019-12-22',7,'Isabella Perez','Elossa'),('2017-06-22',8,'Kurt Von Steiner','Elossa');
 
 UPDATE  tila SET tila = 'Kuollut' where hahmon_nimi = 'Konrad'; 
