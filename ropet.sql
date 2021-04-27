@@ -1,6 +1,6 @@
 drop DATABASE if exists roolipelit;
 
-create DATABASE roolipelit CHARACTER SET utf8mb4_swedish_ci COLLATE utf8mb4_swedish_ci;
+create DATABASE roolipelit CHARACTER SET utf8mb4 COLLATE utf8mb4_swedish_ci;
 use roolipelit;
 
 
