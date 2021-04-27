@@ -6,8 +6,8 @@ use roolipelit;
 
 create table peli (
     pelinro int primary key AUTO_increment,
-    pelin_nimi varchar (30) NOT NULL,
-    pelinjohtaja varchar (30) NOT NULL
+    pelin_nimi varchar (100) NOT NULL,
+    pelinjohtaja varchar (100) NOT NULL
 );
 
 INSERT INTO peli (pelin_nimi, pelinjohtaja) VALUES ('Witcher RPG','Aleksi'),('Vampire:The Masquerade', 'Tomme'),('Shadowrun','Taneli'),('Twilight:2000','Severi');
@@ -15,8 +15,8 @@ INSERT INTO peli (pelin_nimi, pelinjohtaja) VALUES ('Witcher RPG','Aleksi'),('Va
 create table hahmo (
     hahmonro int primary key AUTO_increment,
     pelinro int NOT NULL,    
-    pelaaja_nimi varchar (30) NOT NULL,
-    hahmon_nimi varchar (30) NOT NULL,
+    pelaaja_nimi varchar (100) NOT NULL,
+    hahmon_nimi varchar (100) NOT NULL,
     CONSTRAINT hahmo_fk FOREIGN KEY (pelinro) 
         REFERENCES peli (pelinro)
 );
@@ -28,7 +28,7 @@ create table tila (
     ID int PRIMARY KEY AUTO_increment,
     luontipvm date NOT NULL,
     hahmonro int unique NOT NULL,
-    hahmon_nimi varchar (30) NOT NULL,
+    hahmon_nimi varchar (100) NOT NULL,
     tila varchar (7) NOT NULL,
     kuolinpvm date,
     CONSTRAINT fk_tila FOREIGN KEY (hahmonro)
