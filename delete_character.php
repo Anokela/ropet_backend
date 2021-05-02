@@ -7,10 +7,13 @@ $hahmonro = filter_var($input->hahmonro,FILTER_SANITIZE_STRING);
 
 try {
     $db = openDb();
-    $query = $db->prepare("delete FROM hahmo WHERE hahmonro = :hahmonro");
-    $query->bindValue(':hahmonro',$hahmonro,PDO::PARAM_INT);
+    $query1 = $db->prepare("delete FROM tila WHERE hahmonro = :hahmonro");
+    $query2 = $db->prepare("delete FROM hahmo WHERE hahmonro = :hahmonro");
+    $query1->bindValue(':hahmonro',$hahmonro,PDO::PARAM_INT);
+    $query2->bindValue(':hahmonro',$hahmonro,PDO::PARAM_INT);
     
-    $query->execute();
+    $query1->execute();
+    $query2->execute();
     
     header ('HTTP/1.1 200 OK');
     $data = array('hahmonro' => $hahmonro);
