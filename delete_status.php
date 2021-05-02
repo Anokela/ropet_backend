@@ -1,4 +1,5 @@
 <?php
+/*Tätä ei tarvita, koska statuksen poisto tapahtuu delete_character.php tiedostossa */
 require_once './Inc/functions.php';
 require_once './Inc/headers.php';
 
